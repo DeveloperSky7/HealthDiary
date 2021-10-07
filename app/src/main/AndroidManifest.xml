@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.seokhwan.weight_record">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/main_icon"
+        android:label="체중다이어리"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyBodyTest1">
+        <activity android:name=".MainFragmentDialog"
+            android:theme="@style/dialogTheme" />
+        <activity
+            android:name=".WeightRecordCustomDialog"
+            android:theme="@style/dialogTheme" />
+        <activity
+            android:name=".FoodmenuRecordCustomDialog"
+            android:theme="@style/dialogTheme" />
+        <activity android:name=".UserLogin" />
+        <activity android:name=".UserWeight" />
+        <activity android:name=".UserGender" />
+        <activity android:name=".UserBirth" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4199864840138802~4009355289"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserLogin">
+
+    <TextView
+        android:id="@+id/user_login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:text="회원 정보 입력"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_login_summary"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="생년월일, 성별, 몸무게 입력해주시면 다양한 정보를 제공해드릴께요."
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_login_title" />
+
+    <TableLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_login_summary">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/underline">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="생 일 :"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:maxLines="1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:id="@+id/user_login_birth"
+                android:background="@drawable/user_login_btn"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/underline">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="성 별 :"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:maxLines="1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:id="@+id/user_login_gender"
+                android:background="@drawable/user_login_btn"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/underline">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="몸무게 :"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:maxLines="1"/>
+
+            <EditText
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:id="@+id/user_login_weight"
+                android:background="@drawable/user_login_btn"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/underline">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="키 :"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:maxLines="1"/>
+
+            <EditText
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:id="@+id/user_login_height"
+                android:imeOptions="actionGo"
+                android:background="@drawable/user_login_btn"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"/>
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/user_login_nextbtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="193dp"
+        android:background="#EFECCD"
+        android:text="입력 완료"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
